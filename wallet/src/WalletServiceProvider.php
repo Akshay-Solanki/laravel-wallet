@@ -1,6 +1,6 @@
 <?php
 
-namespace Axy\Wallet\Providers;
+namespace Axy\Wallet;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -13,7 +13,9 @@ class WalletServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+      $this->mergeConfigFrom(
+        __DIR__.'/../config/axy_wallet.php', 'axy_wallet'
+      );
     }
 
     /**
@@ -23,6 +25,10 @@ class WalletServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $this->publishes([
+            __DIR__.'/../config/axy_wallet.php' => config_path('axy_wallet.php'),
+        ]);
+
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
     }
 }
