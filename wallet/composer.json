@@ -1,0 +1,16 @@
+{
+    "name": "axy/wallet",
+    "description": "User Wallet",
+    "autoload": {
+        "psr-4": {
+            "Axy\\Wallet\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Akshay Solanki",
+            "email": "akshaysolanki122@gmail.com"
+        }
+    ],
+    "require": {}
+}
