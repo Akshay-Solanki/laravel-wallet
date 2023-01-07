@@ -3,37 +3,36 @@
 namespace Axy\Wallet\Trait;
 
 use Axy\Wallet\Models\UserWallet;
-use Illuminate\Database\Eloquent\Casts\Attribute;
+use Axy\Wallet\Services\CastServiceInterface;
+use Axy\Wallet\Services\WalletServiceInterface;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 
 trait HasWallet {
 
-    public function getWallet() : MorphOne
+    public function wallet() : MorphOne
     {
-        return $this->morphOne(UserWallet::class,'walletable');
+        return $this->morphOne(UserWallet::class,'walletable')
+          ->withDefault(static function(UserWallet $wallet, object $model){
+            $wallet->forceFill([
+              'amount' =>  0,
+              'status' =>  'active',
+            ]);
+
+            if ($model->exists) {
+               $wallet->setRelation('walletable', $model->withoutRelations());
+            }
+          });
     }
 
-
-    public function getAmount(): Attribute
+    public function getBalanceAttribute()
     {
-        return Attribute::make(
-            get: fn($value) =>  (((int)($value * 100))/100),
-            set: fn($value) =>  (((int)($value * 100))/100),
-        );
+      return app(WalletServiceInterface::class)->balance(app(CastServiceInterface::class)->getWallet($this));
     }
 
-
-    public function getWalletBalance()
+    public function credit($amount)
     {
-        if(!$this->getWallet){
-            return $this->createWallet()->amount;
-        }
-        return $this->getWallet->amount;
+      return app(WalletServiceInterface::class)->credit(app(CastServiceInterface::class)->getWallet($this), $amount);
     }
 
-    public function createWallet()
-    {
-        return $this->getWallet()->create(['amount' => 0 ]);
-    }
 }
 

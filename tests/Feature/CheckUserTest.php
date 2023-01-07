@@ -16,4 +16,30 @@ class CheckUserTest extends TestCase{
 
     $this->assertDatabaseCount('users', 1);
   }
+
+  /** @test */
+  public function test_user_can_check_balance()
+  {
+    $user = UserFactory::new()->create();
+
+    $this->assertEquals($user->balance, 0);
+  }
+
+  /** @test */
+  public function test_user_can_credit_balance()
+  {
+    $user = UserFactory::new()->create();
+    $user->credit(50);
+    $this->assertEquals($user->balance, 50);
+  }
+
+  /** @test */
+  public function test_user_can_debit_balance()
+  {
+    $user = UserFactory::new()->create();
+    $user->credit(100);
+    $user->credit(50);
+    $this->assertEquals($user->balance, 50);
+  }
+
 }
