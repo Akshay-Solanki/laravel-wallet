@@ -38,7 +38,10 @@ class CheckUserTest extends TestCase{
   {
     $user = UserFactory::new()->create();
     $user->credit(100);
+    $this->assertEquals($user->balance, 100);
+    $this->assertDatabaseCount('user_wallet_history', 1);
     $user->credit(50);
+    $this->assertDatabaseCount('user_wallet_history', 2);
     $this->assertEquals($user->balance, 50);
   }
 
