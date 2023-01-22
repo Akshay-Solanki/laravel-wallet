@@ -1,15 +1,15 @@
 {
-    "name": "axy/wallet",
+    "name": "axy-sol/wallet",
     "description": "User Wallet",
     "autoload": {
         "psr-4": {
-            "Axy\\Wallet\\": "src/",
-            "Axy\\Wallet\\Database\\Factories\\": "database/factories/"
+            "AxySol\\Wallet\\": "src/",
+            "AxySol\\Wallet\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Axy\\Wallet\\Tests\\": "tests"
+            "AxySol\\Wallet\\Tests\\": "tests"
         }
     },
     "authors": [

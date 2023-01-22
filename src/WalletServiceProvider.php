@@ -1,8 +1,14 @@
 <?php
 
-namespace Axy\Wallet;
+namespace AxySol\Wallet;
 
+use AxySol\Wallet\Services\CastService;
+use AxySol\Wallet\Services\MathService;
+use AxySol\Wallet\Services\WalletService;
 use Illuminate\Support\ServiceProvider;
+use AxySol\Wallet\Services\CastServiceInterface;
+use AxySol\Wallet\Services\MathServiceInterface;
+use AxySol\Wallet\Services\WalletServiceInterface;
 
 class WalletServiceProvider extends ServiceProvider
 {
@@ -30,5 +36,8 @@ class WalletServiceProvider extends ServiceProvider
         ]);
 
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+        $this->app->singleton(MathServiceInterface::class,MathService::class);
+        $this->app->singleton(WalletServiceInterface::class,WalletService::class);
+        $this->app->singleton(CastServiceInterface::class,CastService::class);
     }
 }

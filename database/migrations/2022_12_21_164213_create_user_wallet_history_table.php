@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('wallet_id');
             $table->float('amount');
+            $table->enum('type',['credit','debit']);
             $table->string('transaction_id');
             $table->timestamps();
         });

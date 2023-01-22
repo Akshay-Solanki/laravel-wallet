@@ -1,8 +1,8 @@
 <?php
 
-namespace Axy\Wallet\Tests\Infra;
+namespace AxySol\Wallet\Tests\Infra;
 
-use Axy\Wallet\WalletServiceProvider;
+use AxySol\Wallet\WalletServiceProvider;
 use function Orchestra\Testbench\artisan;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
