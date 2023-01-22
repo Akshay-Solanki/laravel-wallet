@@ -1,14 +1,14 @@
 <?php
 
-namespace Axy\Wallet;
+namespace AxySol\Wallet;
 
-use Axy\Wallet\Services\CastService;
-use Axy\Wallet\Services\MathService;
-use Axy\Wallet\Services\WalletService;
+use AxySol\Wallet\Services\CastService;
+use AxySol\Wallet\Services\MathService;
+use AxySol\Wallet\Services\WalletService;
 use Illuminate\Support\ServiceProvider;
-use Axy\Wallet\Services\CastServiceInterface;
-use Axy\Wallet\Services\MathServiceInterface;
-use Axy\Wallet\Services\WalletServiceInterface;
+use AxySol\Wallet\Services\CastServiceInterface;
+use AxySol\Wallet\Services\MathServiceInterface;
+use AxySol\Wallet\Services\WalletServiceInterface;
 
 class WalletServiceProvider extends ServiceProvider
 {

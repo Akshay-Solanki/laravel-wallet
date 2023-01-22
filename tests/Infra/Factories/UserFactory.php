@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Axy\Wallet\Tests\Infra\Factories;
+namespace AxySol\Wallet\Tests\Infra\Factories;
 
-use Axy\Wallet\Tests\Infra\Models\User;
+use AxySol\Wallet\Tests\Infra\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class UserFactory extends Factory

@@ -1,7 +1,7 @@
 <?php
-namespace Axy\Wallet\Services;
+namespace AxySol\Wallet\Services;
 
-use Axy\Wallet\Models\UserWallet;
+use AxySol\Wallet\Models\UserWallet;
 
 interface WalletServiceInterface{
 

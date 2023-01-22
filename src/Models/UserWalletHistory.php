@@ -1,6 +1,6 @@
 <?php
 
-namespace Axy\Wallet\Models;
+namespace AxySol\Wallet\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;

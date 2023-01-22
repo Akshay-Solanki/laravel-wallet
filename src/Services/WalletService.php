@@ -1,11 +1,11 @@
 <?php
-namespace Axy\Wallet\Services;
+namespace AxySol\Wallet\Services;
 
 use Illuminate\Support\Str;
-use Axy\Wallet\Models\UserWallet;
-use Axy\Wallet\Models\UserWalletHistory;
-use Axy\Wallet\Services\MathServiceInterface;
-use Axy\Wallet\Exceptions\AttemptToNegetiveRechargeException;
+use AxySol\Wallet\Models\UserWallet;
+use AxySol\Wallet\Models\UserWalletHistory;
+use AxySol\Wallet\Services\MathServiceInterface;
+use AxySol\Wallet\Exceptions\AttemptToNegetiveRechargeException;
 
 class WalletService implements WalletServiceInterface{
 

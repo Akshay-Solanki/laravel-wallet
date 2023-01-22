@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Axy\Wallet\Tests\Infra;
+namespace AxySol\Wallet\Tests\Infra;
 
 use Illuminate\Support\ServiceProvider;
 

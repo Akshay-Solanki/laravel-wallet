@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-namespace Axy\Wallet\Tests\Infra\Models;
-use Axy\Wallet\Trait\HasWallet;
+namespace AxySol\Wallet\Tests\Infra\Models;
+use AxySol\Wallet\Trait\HasWallet;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable{

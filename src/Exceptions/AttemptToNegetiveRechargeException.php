@@ -1,6 +1,6 @@
 <?php
 
-namespace Axy\Wallet\Exceptions;
+namespace AxySol\Wallet\Exceptions;
 
 use InvalidArgumentException;
 

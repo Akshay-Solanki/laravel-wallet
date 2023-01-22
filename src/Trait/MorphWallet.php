@@ -1,8 +1,8 @@
 <?php
 
-namespace Axy\Wallet\Trait;
+namespace AxySol\Wallet\Trait;
 
-use Axy\Wallet\Models\UserWallet;
+use AxySol\Wallet\Models\UserWallet;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 
 trait MorphWallet {

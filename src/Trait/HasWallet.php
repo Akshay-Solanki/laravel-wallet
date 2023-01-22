@@ -1,10 +1,10 @@
 <?php
 
-namespace Axy\Wallet\Trait;
+namespace AxySol\Wallet\Trait;
 
-use Axy\Wallet\Models\UserWallet;
-use Axy\Wallet\Services\CastServiceInterface;
-use Axy\Wallet\Services\WalletServiceInterface;
+use AxySol\Wallet\Models\UserWallet;
+use AxySol\Wallet\Services\CastServiceInterface;
+use AxySol\Wallet\Services\WalletServiceInterface;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 
 trait HasWallet {

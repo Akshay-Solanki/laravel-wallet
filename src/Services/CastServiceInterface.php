@@ -1,5 +1,5 @@
 <?php
-namespace Axy\Wallet\Services;
+namespace AxySol\Wallet\Services;
 
 interface CastServiceInterface{
 

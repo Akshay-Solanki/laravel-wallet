@@ -1,8 +1,8 @@
 <?php
 
-namespace Axy\Wallet\Services;
+namespace AxySol\Wallet\Services;
 
-use Axy\Wallet\Models\UserWalletHistory;
+use AxySol\Wallet\Models\UserWalletHistory;
 
 class WalletHistoryService implements WalletHistoryServiceInterface
 {

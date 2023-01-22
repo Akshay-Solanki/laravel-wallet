@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace Axy\Wallet\Tests\Feature;
+namespace AxySol\Wallet\Tests\Feature;
 
-use Axy\Wallet\Tests\Infra\TestCase;
-use Axy\Wallet\Tests\Infra\Factories\UserFactory;
+use AxySol\Wallet\Tests\Infra\TestCase;
+use AxySol\Wallet\Tests\Infra\Factories\UserFactory;
 
 
 class CheckUserTest extends TestCase{

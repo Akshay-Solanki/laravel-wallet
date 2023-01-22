@@ -1,6 +1,6 @@
 <?php
 
-namespace Axy\Wallet\Interfaces;
+namespace AxySol\Wallet\Interfaces;
 
 interface Wallet{
   
