@@ -1,6 +1,7 @@
 {
     "name": "axy-sol/wallet",
     "description": "User Wallet",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "AxySol\\Wallet\\": "src/",
